@@ -27,3 +27,6 @@ if [ $? -ne 0 ] ; then
 	echo "User is not a sudoer"
 fi
 sudo $PKG_MGR install tmux vim tmux-powerline -y
+ln -sf $PWD/tmux.conf $HOME/.tmux.conf
+ln -sf $PWD/vimrc $HOME/.vimrc
+
