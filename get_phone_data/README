@@ -1,0 +1,40 @@
+GET MOST CONTACTED DATA from you phone
+==================================
+
+Tested on Fedora23, android 6.0.1 
+- Needs linux machine with the phone attached the system using usb
+ cable.
+- Needs adb installed its avalibale as "android tools"
+- Needs you to enable "developer mode -> USB debugging"
+(to get the data)
+- If android verion is above Kitkat , you will get a pop up in the
+phone, accept that to allow access to adb.
+
+How to Run without python
+=========================
+you can paste the command mentioned in get_most_contacted.sh and 
+you will get top 50. 
+( works on linux only)
+
+How to Run with python
+======================
+./get_most_contacted.py 
+
++-----------------+-----------+
+|       Name      | contacted |
++-----------------+-----------+
+|  Person1 	  |    3226   |
+|   person2	  |    2289   |
+|   Yanki1	  |    815    |
+|   GG		  |    656    |
+|   Gore	  |    584    |
+|    Chang        |    574    |
+|  Tom		  |    539    |
+|   Stacy	  |    516    |
+|       Home      |    329    |
+|    Mike   	  |    327    |
+|  Steve 	  |    250    |
+|  James	  |    208    |
++-----------------+-----------+
+
+
