@@ -55,9 +55,10 @@ then
 	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 	#find python powerline package location
 	POWERLINE_PATH=`pip show  powerline-status |grep Location: | cut -d " " -f2`
-	sed  -e "s!PPTH!$POWERLINE_PATH\/powerline/bindings!" tmux.conf1 | tee tmux.conf
+	echo "x=$POWERLINE_PATH" > tmux.conf1
+	cat tmux.conf >> tmux.conf1
 	#put tmux conf inplace
-	ln -sf $PWD/tmux.conf $HOME/.tmux.conf
+	ln -sf $PWD/tmux.conf1 $HOME/.tmux.conf
 	#put vim rc inplace
 	ln -sf $PWD/vimrc $HOME/.vimrc
 	#install all vim plugins
