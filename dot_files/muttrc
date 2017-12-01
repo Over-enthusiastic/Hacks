@@ -1,0 +1,46 @@
+  set imap_user = 'xyz@gmail.com'
+  set imap_pass = 'pass'
+
+  set smtp_url = 'smtp://xyz@smtp.gmail.com:587'
+  set smtp_pass = 'pass'
+  set record=""
+
+  set from = "xyz@gmail.com"
+  set realname = "Akshay Adiga"
+
+  set editor = 'vim + -c "set textwidth=72" -c "set wrap"'
+
+  set folder = "imaps://imap.gmail.com:993"
+  set mbox_type = maildir
+  set mbox = ~/Mail/
+  set spoolfile = +INBOX
+  set record = "+[Gmail]/Sent Mail"
+  set postponed = "+[Gmail]/Drafts"
+
+  mailboxes +INBOX
+  mailboxes +Archive
+  mailboxes +Important
+
+  set header_cache=~/.mutt/cache/headers
+  set message_cachedir=~/.mutt/cache/bodies
+  set certificate_file=~/.mutt/certificates
+
+
+  bind index g imap-fetch-mail
+
+  set sidebar_visible
+  set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+  set mail_check_stats
+  set message_cachedir =  ~/Mail/ 
+
+  macro index,pager A "<save-message>=Archive<enter>" "Archive Message"
+  macro index,pager I "<save-message>=Important<enter>" "Archive Message"
+  color   body    green           default         "^[\+][^\+]+.*"
+  color   body    yellow          default         "^diff \-.*"
+  color   body    brightwhite     default         "^index [a-f0-9].*"
+  color   body    brightblue      default         "^---$"
+  color   body    red             default         "^\-[^\-]+.*"
+  color   body    brightblue      default 	  "^@@ .*
+set quit=ask-yes
+set mail_check=60
+set sort = threads
