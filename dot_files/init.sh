@@ -63,6 +63,12 @@ then
 	ln -sf $PWD/vimrc $HOME/.vimrc
 	#install all vim plugins
 	vim +PluginInstall +qall
+	if [ "$PKG_MGR" == "dnf" ] ; then
+		sudo dnf install dnf-plugins-core
+		dnf copr enable flatcap/neomutt
+	fi
+	sudo $PKG_MGR install neomutt
+	ln -s $PWD/muttrc $HOME/.muttrc
 else
 	rm -rf ~/.vim/bundle  ~/.tmux/plugins/tpm
 	rm /usr/share/fonts/PowerlineSymbols.otf
