@@ -66,13 +66,21 @@ then
 	if [ "$PKG_MGR" == "dnf" ] ; then
 		sudo dnf install dnf-plugins-core
 		dnf copr enable flatcap/neomutt
+		sudo $PKG_MGR install neomutt
+	elif [ "$PKG_MGR" == "apt" ] ; then
+		sudo apt install mutt
 	fi
-	sudo $PKG_MGR install neomutt
 	ln -s $PWD/muttrc $HOME/.muttrc
 else
+	if [ "$PKG_MGR" == "dnf" ] ; then
+		sudo $PKG_MGR remove neomutt
+	elif [ "$PKG_MGR" == "apt" ] ; then
+		sudo apt remove mutt
+	fi
 	rm -rf ~/.vim/bundle  ~/.tmux/plugins/tpm
 	rm /usr/share/fonts/PowerlineSymbols.otf
 	rm /etc/fonts/conf.d/10-powerline-symbols.conf
 	unlink $HOME/.tmux.conf
 	unlink $HOME/.vimrc
+	unlink $HOME/.muttrc
 fi
