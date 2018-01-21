@@ -1,6 +1,21 @@
 # Hacks
 Contains general code/scripts that come handy for linux developers
 
+## bookmyforex
+Contains script that can get you forex sell/buy for a given currency from bookmyforex website.
+Requires firefox ( should have visited bookmyforex.com and saved cookies).
+Set COOKIE\_DB to correct path
+```
+./bookmyforex.py
+0.823454 : 77.4654
+^^^^         ^^^^
+Time taken    |
+to fetch      |
+	  Quote
+	as mentioned
+        on website
+```
+
 ## dotfiles
 Contains dotfiles , currently just for tmux and vim . configures with powerline.
 `Usage : ./init.sh`
@@ -19,6 +34,7 @@ A Docker setup that can build kernel rpms for RHEL-like distros.
 A script that can extract data from you phone and tell you whom have you
 contacted the most, this data is being tracked as part of google contacts
 Every whatsapp/call/text increments `contacted_times`.
+
 
 Script uses this information to tell you whom you contacted the most
 with the phone which has your google login.
