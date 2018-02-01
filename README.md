@@ -1,6 +1,15 @@
 # Hacks
 Contains general code/scripts that come handy for linux developers
 
+## splitwise
+Contains script that can get your balance for a splitwise "group". Quite useful to hookup with other tools
+to tally your complete budget.
+
+```
+./parse_splitwise.py 
+6746.08
+```
+
 ## bookmyforex
 Contains script that can get you forex sell/buy for a given currency from bookmyforex website.
 Requires firefox ( should have visited bookmyforex.com and saved cookies).
