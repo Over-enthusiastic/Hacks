@@ -43,6 +43,8 @@ import json
 from pprint import pprint
 import codecs
 
+bonus_2020 = { 11:34 ,15:37 ,20:41 ,100:45 }
+bonus_2019 = { 5:34 , 11:34, 15:37 ,20:41, 100:45 }
 bonus_2018 = { 11:38 ,15:41 ,20:45 ,100:49 }
 bonus_2014 = { 11:37, 15:40 ,20:44, 100:48 }
 bonus_2012 = { 11:36, 15:39 ,20:43, 100:47 }
@@ -64,19 +66,19 @@ bonus = {
           2015:bonus_2018 ,
           2016:bonus_2018 ,
           2017:bonus_2018 ,
-          #predict the future
-          #2018:bonus_2018 ,
-          #2019:bonus_2018 ,
-          #2020:bonus_2018 ,
-          #2021:bonus_2018 ,
-          #2022:bonus_2018 ,
-          #2023:bonus_2018 ,
-          #2025:bonus_2018 ,
-          #2026:bonus_2018 ,
-          #2027:bonus_2018 ,
-          #2028:bonus_2018 ,
-          #2029:bonus_2018 ,
-          #2030:bonus_2018 ,
+          2018:bonus_2018 ,
+          2019:bonus_2019 ,
+          2020:bonus_2020 ,
+	#predict the future
+          #2021:bonus_2020 ,
+          #2022:bonus_2020 ,
+          #2023:bonus_2020 ,
+          #2025:bonus_2020 ,
+          #2026:bonus_2020 ,
+          #2027:bonus_2020 ,
+          #2028:bonus_2020 ,
+          #2029:bonus_2020 ,
+          #2030:bonus_2020 ,
           }
 def print_money(x) :
     return locale.currency(x, grouping=True,symbol=False)
